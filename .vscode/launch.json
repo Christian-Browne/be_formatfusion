@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    // make a launch config for fastapi
+    {
+      "name": "Python: FastAPI",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["main:app", "--reload"]
+    }
+  ]
+}
