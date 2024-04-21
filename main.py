@@ -20,6 +20,11 @@ app.add_middleware(
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
+@app.get("/")
+async def read_root():
+    return {"Hello": "World"}
+
+
 @app.post("/upload")
 async def upload_video_clips(
     effect: Optional[str] = Form(None),
