@@ -32,7 +32,7 @@ async def convert_to_tik_tok(
         if os.path.exists(clip.filename):
             os.remove(clip.filename)
 
-    return f"http://localhost:8000/{final_video_path}"
+    return f"https://formatfusion-christianbrowne.koyeb.app/static/{os.path.basename(final_video_path)}"
 
 
 async def add_audio_to_video(video_filename: str, audio: UploadFile):
